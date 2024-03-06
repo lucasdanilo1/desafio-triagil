@@ -1,6 +1,6 @@
 package com.restapi.desafiotriagil.services;
 
-import com.restapi.desafiotriagil.dto.CreationTeamDTO;
+import com.restapi.desafiotriagil.dto.TeamCreationDTO;
 import com.restapi.desafiotriagil.dto.TeamDTO;
 import com.restapi.desafiotriagil.model.Owner;
 import com.restapi.desafiotriagil.model.Pokemon;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface TeamService {
 
-    void createAndSaveTeam(CreationTeamDTO creationTeamDTO);
+    void createAndSaveTeam(TeamCreationDTO teamCreationDTO);
 
     List<TeamDTO> getAllTeams();
 

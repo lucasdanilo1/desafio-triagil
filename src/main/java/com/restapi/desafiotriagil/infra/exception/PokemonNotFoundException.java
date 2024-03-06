@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public class PokemonNotFoundException extends RuntimeException {
 
-    private String pokemonName;
+    private final String pokemonName;
 
     public PokemonNotFoundException(String pokemonName){
         this.pokemonName = pokemonName;

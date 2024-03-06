@@ -26,8 +26,8 @@ CREATE TABLE team_pokemons (
 
 CREATE TABLE owner_teams (
     owner_id BIGINT,
-    team_id BIGINT,
+    teams_id BIGINT,
     FOREIGN KEY (owner_id) REFERENCES Owner(id),
-    FOREIGN KEY (team_id) REFERENCES Team(id),
-    PRIMARY KEY (owner_id, team_id)
+    FOREIGN KEY (teams_id) REFERENCES Team(id),
+    PRIMARY KEY (owner_id, teams_id)
 );

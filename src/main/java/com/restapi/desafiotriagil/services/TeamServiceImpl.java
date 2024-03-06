@@ -1,8 +1,9 @@
 package com.restapi.desafiotriagil.services;
 
 import com.restapi.desafiotriagil.dto.PokemonResultDTO;
-import com.restapi.desafiotriagil.dto.CreationTeamDTO;
+import com.restapi.desafiotriagil.dto.TeamCreationDTO;
 import com.restapi.desafiotriagil.dto.TeamDTO;
+import com.restapi.desafiotriagil.infra.exception.OwnerNotFoundException;
 import com.restapi.desafiotriagil.infra.exception.PokemonNotFoundException;
 import com.restapi.desafiotriagil.model.Owner;
 import com.restapi.desafiotriagil.model.Pokemon;
@@ -36,17 +37,17 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     @Transactional
-    public void createAndSaveTeam(CreationTeamDTO creationTeamDTO) {
+    public void createAndSaveTeam(TeamCreationDTO teamCreationDTO) {
 
-        List<String> pokemonTeam = creationTeamDTO.team();
+        List<String> pokemonTeam = teamCreationDTO.team();
 
-        boolean hasPokemonDuplicates = pokemonTeam.stream().distinct().count() != creationTeamDTO.team().size();
+        boolean hasPokemonDuplicates = pokemonTeam.stream().distinct().count() != teamCreationDTO.team().size();
 
         if(hasPokemonDuplicates){
-            pokemonTeam = this.removePokemonDuplicatesFromTeam(creationTeamDTO.team());
+            pokemonTeam = this.removePokemonDuplicatesFromTeam(teamCreationDTO.team());
         }
 
-        var owner = this.getOrCreateNewOwner(creationTeamDTO.user());
+        var owner = this.getOrCreateNewOwner(teamCreationDTO.user());
         var team = this.saveEachPokemonInTeam(pokemonTeam, new Team());
 
         team.setOwner(owner);
@@ -66,6 +67,9 @@ public class TeamServiceImpl implements TeamService {
 
     @Override
     public List<TeamDTO> getTeamsByOwner(String ownerName) {
+        if(!teamRepository.existsByOwnerName(ownerName)){
+            throw new OwnerNotFoundException(ownerName);
+        }
         return teamRepository.findAllByOwnerName(ownerName).stream().map(TeamDTO::new).toList();
     }
 
@@ -102,7 +106,7 @@ public class TeamServiceImpl implements TeamService {
 
             Pokemon pokemon;
 
-            if(pokemonRepository.findByName(pokemonName) == null){
+            if(!pokemonRepository.existsByName(pokemonName)){
                 pokemon = this.obtainPokemonInfoAndSave(pokemonName);
             } else pokemon = pokemonRepository.findByName(pokemonName);
 
@@ -129,12 +133,11 @@ public class TeamServiceImpl implements TeamService {
 
         if (resp.getStatusCode() == HttpStatus.OK) {
 
-            PokemonResultDTO pokemonResult = resp.getBody();
+            var pokemonResult = resp.getBody();
 
             assert pokemonResult != null;
 
             Pokemon pokemon = new Pokemon(pokemonResult);
-
             pokemonRepository.save(pokemon);
 
             return pokemon;

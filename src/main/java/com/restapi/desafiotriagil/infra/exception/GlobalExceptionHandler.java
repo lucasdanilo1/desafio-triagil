@@ -29,6 +29,19 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
                 request);
     }
 
+    @ExceptionHandler(OwnerNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Object> OwnerNotFound(
+            OwnerNotFoundException ex,
+            WebRequest request) {
+        final String errorMessage = "Usuário '" + ex.getOwnerName() + "' não encontrado";
+        return buildErrorResponse(
+                ex,
+                errorMessage,
+                HttpStatus.NOT_FOUND,
+                request);
+    }
+
     @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<Object> handleAllUncaughtException(

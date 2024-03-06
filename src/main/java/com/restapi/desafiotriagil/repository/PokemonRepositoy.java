@@ -7,4 +7,6 @@ public interface PokemonRepositoy extends JpaRepository<Pokemon, Long> {
 
     Pokemon findByName(String pokemonName);
 
+    boolean existsByName(String pokemonName);
+
 }
