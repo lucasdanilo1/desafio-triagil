@@ -1,4 +1,4 @@
-FROM maven:latest
+FROM maven:latest as builder
 
 ENV PROJECT_HOME /usr/src/desafiotriagil
 ENV JAR_NAME desafiotriagil.jar
