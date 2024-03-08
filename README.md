@@ -35,9 +35,10 @@ docker-compose up
 ```
 
 -------------------------------------------------------------------------------------------------------------
+
 Após isso, a aplicação estará disponível em:
 
-http://localhost:8080.
+http://localhost:8080
 
 A aplicação está documentada com Swagger, portanto, você pode acessar mais informações sobre os endpoints em:
 
