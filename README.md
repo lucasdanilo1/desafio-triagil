@@ -13,8 +13,6 @@ API Restful que permite que usuários criem e gerenciem times de Pokémon de for
 
 # 1. Instalação
 
-## Clone e execução do projeto
-
 #### Passo 1 - Clone o projeto
 
 ```shell
