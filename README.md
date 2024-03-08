@@ -2,7 +2,7 @@
 
 API Restful que permite que usuários criem e gerenciem times de Pokémon de forma simples e eficiente.
 
-## Tecnologias usadas
+## Tecnologias utilizadas
 
 <div>
 <img height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Light.svg"/>
@@ -11,7 +11,7 @@ API Restful que permite que usuários criem e gerenciem times de Pokémon de for
 <img height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/Docker.svg"/>
 </div>
 
-## 1. Instalação
+## 1 . Instalação
 
 #### Passo 1 - Clone o projeto
 
@@ -34,13 +34,9 @@ docker-compose up
 
 -------------------------------------------------------------------------------------------------------------
 
-Após isso, a aplicação estará disponível em:
+Após a conclusão do processo, a aplicação estará prontamente acessível através do seguinte endereço: http://localhost:8080.
 
-http://localhost:8080
-
-A aplicação está documentada com Swagger, portanto, você pode acessar mais informações sobre os endpoints em:
-
-http://localhost:8080/swagger-ui/index.html#/
+Além disso, para uma exploração mais detalhada dos endpoints disponíveis e suas funcionalidades, a aplicação foi documentada utilizando o Swagger. Você pode acessar esta documentação em: http://localhost:8080/swagger-ui/index.html#/
 
 -------------------------------------------------------------------------------------------------------------
 
