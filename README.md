@@ -42,6 +42,7 @@ http://localhost:8080.
 A aplicação está documentada com Swagger, portanto, você pode acessar mais informações sobre os endpoints em:
 
 http://localhost:8080/swagger-ui/index.html#/
+
 -------------------------------------------------------------------------------------------------------------
 
 #### Funcionalidades
