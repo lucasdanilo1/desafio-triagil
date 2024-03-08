@@ -40,9 +40,7 @@ Após a conclusão do processo, a aplicação estará prontamente acessível atr
 
 Além disso, para uma exploração mais detalhada dos endpoints disponíveis suas funcionalidades e tipos de retorno, a aplicação foi documentada utilizando o Swagger. Você pode acessar esta documentação em: http://localhost:8080/swagger-ui/index.html#/
 
--------------------------------------------------------------------------------------------------------------
-
-#### Funcionalidades
+#### Breve descrição dos endpoints
 
 1. **Criação de time:**
    
