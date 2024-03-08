@@ -36,7 +36,7 @@ docker-compose up
 
 Após a conclusão do processo, a aplicação estará prontamente acessível através do seguinte endereço: http://localhost:8080.
 
-Além disso, para uma exploração mais detalhada dos endpoints disponíveis e suas funcionalidades, a aplicação foi documentada utilizando o Swagger. Você pode acessar esta documentação em: http://localhost:8080/swagger-ui/index.html#/
+Além disso, para uma exploração mais detalhada dos endpoints disponíveis suas funcionalidades e tipos de retorno, a aplicação foi documentada utilizando o Swagger. Você pode acessar esta documentação em: http://localhost:8080/swagger-ui/index.html#/
 
 -------------------------------------------------------------------------------------------------------------
 
