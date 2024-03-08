@@ -11,7 +11,9 @@ API Restful que permite que usuários criem e gerenciem times de Pokémon de for
 <img height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/Docker.svg"/>
 </div>
 
-### 1 . Instalação
+-------------------------------------------------------------------------------------------------------------
+
+### Instalação
 
 #### Passo 1 - Clone o projeto
 
