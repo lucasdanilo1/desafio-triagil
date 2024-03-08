@@ -1,7 +1,5 @@
 # Desafio Triágil
 
-## Descrição
-
 API Restful que permite que usuários criem e gerenciem times de Pokémon de forma simples e eficiente.
 
 ## Tecnologias usadas
@@ -14,15 +12,6 @@ API Restful que permite que usuários criem e gerenciem times de Pokémon de for
 </div>
 
 # 1. Instalação
-
-Como instalar e executar o projeto.
-
-## Requerimentos
-
-- Docker
-- Git
-
-Certifique-se que você tem todos os requerimentos devidamente instalandos na sua máquina.
 
 ## Clone e execução do projeto
 
@@ -45,9 +34,9 @@ cd desafio-triagil
 docker-compose up
 ```
 
-# Após isso, a aplicação estará disponível em http://localhost:8080.
+Após isso, a aplicação estará disponível em http://localhost:8080.
 
-# A aplicação está documentada com Swagger, portanto, você pode acessar mais informações sobre os endpoints em http://localhost:8080/swagger-ui/index.html#/
+A aplicação está documentada com Swagger, portanto, você pode acessar mais informações sobre os endpoints em http://localhost:8080/swagger-ui/index.html#/
 
 #### Funcionalidades
 
