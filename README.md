@@ -2,7 +2,7 @@
 
 API Restful que permite que usuários criem e gerenciem times de Pokémon de forma simples e eficiente.
 
-## Tecnologias utilizadas
+### Tecnologias utilizadas
 
 <div>
 <img height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/Java-Light.svg"/>
@@ -11,7 +11,7 @@ API Restful que permite que usuários criem e gerenciem times de Pokémon de for
 <img height="30" width="40" src="https://github.com/tandpfun/skill-icons/blob/main/icons/Docker.svg"/>
 </div>
 
-## 1 . Instalação
+### 1 . Instalação
 
 #### Passo 1 - Clone o projeto
 
@@ -59,3 +59,6 @@ Além disso, para uma exploração mais detalhada dos endpoints disponíveis sua
    - **Descrição:** Busca times registrados por determinado usuário.
    - **Método:** GET
    - **Endpoint:** `/api/teams/{user}`
+  
+-------------------------------------------------------------------------------------------------------------
+
